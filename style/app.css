@@ -1,0 +1,215 @@
+/* || GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caprasimo&family=Grenze+Gotisch:wght@100..900&family=Markazi+Text:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Patrick+Hand&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tillana:wght@400;500;600;700;800&display=swap');
+
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root {
+    /* Fonts */
+    --FF: 'Roboto', sans-serif;
+
+    /* Colors */
+    --TEXT-COLOR: #fff;
+   
+    /* Footer */
+    --FOOTER-TEXT-COLOR: aliceblue;
+    --FOOTER-BGC: radial-gradient(circle, rgba(2,0,36,1) 0%, rgb(89, 89, 192) 0%, rgba(0,212,255,1) 100%);
+    --FOOTER-BACKGROUND: var(--FOOTER-BGC);
+    --BUTTON-BGC: midnightblue;
+    --SOCIAL-MEDIA-BGC: skyblue;
+    --HOVER-COLOR: darkslateblue;
+
+
+    @media (prefers-color-scheme: dark) {
+        /* Colors */
+        --TEXT-COLOR: #000;
+       
+        /* Footer */
+        --FOOTER-TEXT-COLOR: #000;
+        --FOOTER-BGC: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(212,212,212,1) 0%, rgb(83, 81, 81) 100%);
+        --FOOTER-BACKGROUND: var(--FOOTER-BGC);
+        --BUTTON-BGC: #000;
+        --SOCIAL-MEDIA-BGC: whitesmoke;
+        --HOVER-COLOR: whitesmoke;
+
+    }
+}
+
+/* || GENERAL CSS */
+body {
+    font-family: var(--FF);    
+}
+
+/* || FOOTER */
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: var(--FOOTER-TEXT-COLOR);
+    background: var(--FOOTER-BACKGROUND);
+}
+
+footer .content {
+    max-width: 1350px;
+    margin:  auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .content .box {
+    width: 33%;
+    transition: all 0.5s ease;
+}
+
+footer .content .topic {
+    color: var(--TEXT-COLOR);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+footer .content p{
+    text-align: justify;
+}
+
+footer .content a {
+    text-decoration: none;
+    color: var(--FOOTER-TEXT-COLOR);
+}
+
+footer .content .lower .topic {
+    margin: 24px 0 5px 0;
+}
+
+footer .content .lower i {
+    padding-right: 16px;
+}
+
+footer .content .middle {
+    padding-left: 80px;
+}
+
+footer .content .middle a {
+    line-height: 32px;
+}
+
+footer .content .right input[type="text"] {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    color: #d9d9d9;
+    background: papayawhip;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 2px solid #222222;
+}
+
+footer .content .right input[type="submit"] {
+    height:  45px;
+    width: 100%;
+    font-size: 18px;
+    background: var(--BUTTON-BGC);
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 2px solid var(--BUTTON-BGC);
+    margin-top: 12px;
+    transition: all 0.5s ease-in-out;
+}
+
+footer .content .right input[type="submit"]:hover {
+    background: none;
+    color: var(--BUTTON-BGC);
+}
+
+footer .content .social-media a{
+    font-size: 16px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    /* background: var(--SOCIAL-MEDIA-BGC); */
+    text-align: center;
+    line-height: 43px;
+    border-radius: 5px;
+    border: 2px solid var(--BUTTON-BGC);
+    margin: 30px 5px 0 0;
+    transition: all .5s ease;
+}
+
+.content .social-media a:hover {
+    border-color: var(--SOCIAL-MEDIA-BGC);
+}
+
+footer .bottom {
+    width: 100%;
+    text-align: right;
+    color: var(--FOOTER-TEXT-COLOR);
+    padding: 0 40px 5px 0;
+}
+
+footer .bottom a {
+    text-decoration: none;
+    color: goldenrod;
+}
+
+footer a {
+    transition: all .5s ease;
+}
+
+footer a:hover {
+    color: var(--HOVER-COLOR);
+}
+
+
+/* || MEDIA QUERIES */
+@media (max-width: 1100px) {
+    footer .content .middle {
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 950px) {
+    footer .content .box {
+        width: 50%;
+    }
+
+    .content .right {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 560px) {
+    body {
+        padding-bottom: 100px;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    footer .content .box {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    footer .content .middle {
+        padding-left: 0;
+    }
+
+    footer .bottom {
+        text-align: center;
+    }
+}
+
+
